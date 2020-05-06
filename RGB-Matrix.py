@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw
 import sys, os, datetime, argparse
 
-export_fformat = '.jpg' # Output-Format - 0=jpg 1=png
+export_fformat = '.jpg' # Output-Format
 export_fformats = {'.jpg': 'JPEG', '.png': 'PNG'}
 
 ext = '_rgb-matrix' #filename extension for the output file
@@ -9,7 +9,7 @@ ext = '_rgb-matrix' #filename extension for the output file
 pixel_width = 2 #width of each pixel - so three units (rgb) of this value must go into one block
 pixel_height = 5 #height of the pixels (value must go into one block)
 
-block = 7 #block width - 1 block contains one red, one greed and one blue pixel - margin inclusive
+block = 7 #block width - 1 block contains one red, one greed and one blue pixel - black space inclusive
 
 valid_formats = ['.bmp', '.jpeg', '.jpg', '.png', '.tiff', '.tif', '.webp']
 
@@ -18,9 +18,9 @@ valid_formats = ['.bmp', '.jpeg', '.jpg', '.png', '.tiff', '.tif', '.webp']
 parser = argparse.ArgumentParser(description='Render a display RGB matrix from a source image.')
 parser.add_argument('file', type=str, metavar='', help='Filename of Source-Image')
 parser.add_argument('-f', '--format', type=str, metavar='', help='Export File-Format (.jpg or .png)')
-parser.add_argument('-w', '--width', type=int, metavar='', help='Width of each Pixel.')
-parser.add_argument('-H', '--height', type=int, metavar='', help='Height of each Pixel.')
-parser.add_argument('-b', '--block', type=int, metavar='', help='The Block-Size defines the overall size of the repeated Pixel-Pattern.')
+parser.add_argument('-w', '--width', type=int, metavar='', help='Width of each individual Pixel (R-G-B).')
+parser.add_argument('-H', '--height', type=int, metavar='', help='Height of each individual Pixel (R-G-B).')
+parser.add_argument('-b', '--block', type=int, metavar='', help='Block-Size defines the overall size of the repeated Pixel-Pattern')
 args = parser.parse_args()
 
 source = args.file #Source image filename
@@ -126,7 +126,7 @@ def process(img, d1, x_orig, y_orig):
 
 if __name__ == "__main__":
 
-	#Check if given file exists
+	#Check if source file exists
 	if os.path.isfile(source):
 		fn, fext = os.path.splitext(source)
 		
