@@ -20,4 +20,4 @@ optional arguments:
 <pre>-w 2 -H 5 -b 7 -B 0 -f .jpg</pre>
 <p>Supported file formats for source image:<br>.bmp, .jpeg, .jpg, .png, .tiff, .tif, .webp</p><br>
 <br><h3>Tips:</h3>
-<ul><li>Two output formats are supported (.jpg & .png). Choosing png as output file format results in a pretty clean matrix, while the compression for .jpg as output file format results in a way more realistic, organic look.</li><li>A pretty low resolution is recommended for the source image. The effect is way more visibl that way.</li></ul>
+<ul><li>Two output formats are supported (.jpg & .png). Choosing png as output file format results in a pretty clean matrix, while the compression for .jpg results in a more realistic, organic look.</li><li>A pretty low resolution is recommended for the source image. The effect is more visible that way.</li></ul>
