@@ -1,3 +1,4 @@
+<img src="Example_01.jpg">
 <h3># RGB-Matrix</h3><p>Render a display RGB matrix from a source image.</p>
 <br><h3>Dependency:</h3>
 <p>Pillow - <a href="https://pillow.readthedocs.io/en/stable/">https://pillow.readthedocs.io/en/stable/</a></p>
