@@ -13,8 +13,8 @@ optional arguments:
 -H , --height   Height of each individual Pixel (R-G-B).
 -b , --block    Block-Size defines the overall size of the repeated Pixel-Pattern
 -B , --black    Shift brightness of black pixels to simulate backlight shining; 0 = black 100 = white
--rw , --resizeWidth     Resize width of source image.
--rh , --resizeHeight    Resize height of source image.</pre>
+-rw , --resizeWidth     Resize width of source image. (For processing only)
+-rh , --resizeHeight    Resize height of source image. (For processing only)</pre>
 <br>
 <img src="info.png" width="30%">
 <br>
